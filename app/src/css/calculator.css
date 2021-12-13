@@ -1,0 +1,92 @@
+.calculator-container {
+	display: flex;
+	width: 100%;
+	height: 100%;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.input-wrapper {
+	width: 45%;
+	height: 90%;
+	padding: 5% 5% 5% 0;
+
+	position: relative;
+	background-color: #fff;
+	border-radius: 15px;
+}
+
+.output-wrapper {
+	width: 45%;
+	height: 90%;
+	padding: 5%;
+
+	background-color: #00474b;
+	border-radius: 15px;
+}
+
+.tip-btn {
+	width: 117px;
+	padding: 2.5% 7.5%;
+	margin: 2.5% 2.5% 2.5% 0;
+
+	border-style: none;
+	border-radius: 5px;
+
+	background-color: #00474b;
+	color: #fff;
+
+	cursor: pointer;
+}
+
+.tip-btn:hover {
+	background-color: #26c2ae;
+	color: #00474b;
+}
+
+.tip-btn-active {
+	background-color: #26c2ae;
+	color: #00474b;
+
+	width: 117px;
+	padding: 2.5% 7.5%;
+	margin: 2.5% 2.5% 2.5% 0;
+
+	border-style: none;
+	border-radius: 5px;
+
+	cursor: pointer;
+}
+
+.output-wrap {
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+}
+
+.output-title {
+	color: #fff;
+	font-weight: 100;
+}
+
+.output-small-text {
+	font-size: 0.8em;
+	font-weight: 100;
+	letter-spacing: 1px;
+
+	color: #7f9d9f;
+}
+
+.out-container {
+	display: flex;
+}
+
+.final-amount {
+	width: 50%;
+	font-size: 2em;
+
+	background: none;
+	text-align: right;
+	color: #26c2ae;
+}
