@@ -45,7 +45,7 @@ input[type="number"] {
 
 .wrapper {
 	height: 50%;
-	width: 70%;
+	/* width: 70%; */
 	margin: auto 0;
 	padding: 5%;
 
@@ -64,4 +64,15 @@ input[type="number"] {
 	display: flex;
 	justify-content: left;
 	align-items: center;
+}
+
+@media all and (max-width: 500px) {
+	.container {
+		display: block;
+	}
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+	}
 }

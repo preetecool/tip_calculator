@@ -7,15 +7,13 @@ import { tipContext } from '../Context'
 
 const Total = () => {
 
-    const {setTotal, total} = useContext(tipContext)
+    const { setTotal } = useContext(tipContext)
 
     const handleTotal = (e) => {
 
-        let copiedTotal = e.target.value;
-        setTotal(copiedTotal)
+        setTotal(e.target.value)
         
     }
-
 
     return (
         

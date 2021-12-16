@@ -19,7 +19,7 @@ const tipSelectHandler = (index) =>{
     setButtons(copiedButtons);
 
 }
-    return (
+    return (    
         <div className="tip-select-wrapper">
            <>
            {buttons.map((el, index) => {

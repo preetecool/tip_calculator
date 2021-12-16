@@ -1,28 +1,30 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState, useEffect} from 'react'
 import { tipContext } from './Context'
 
 const outputs = () => {
 
-const {total, buttons,  numPeople, finalTotal, setFinalTotal} = useContext(tipContext)
+const {total, buttons,  numPeople } = useContext(tipContext)
+
+const [tip, setTip] = useState(0)
+const [totalPerson, setTotalPerson] = useState(0)
 
 
-const handleTipAmount = () => {
+
+useEffect(()=> {
 
     const copiedButtons = [...buttons]
-    let value = 0;
+    let tipValue = 0;
     copiedButtons.filter(e => e.active === true).map((el) => {
+        tipValue = total * el.amount / 100 / numPeople
+        setTip(tipValue);
+       
+}) }, [total, numPeople])
 
-        let parsedTotal = parseInt(total, 10);
-        console.log(parsedTotal)
-        return value = total * el.amount / 100
-        
-    })
-    setFinalTotal({...finalTotal, tip: value})
-   
+useEffect(()=>{
+    let totalPerPerson = tip + total / numPeople
+    setTotalPerson(totalPerPerson)
 
-
-}
-
+,[total, numPeople, tip] })
 
 
     return (
@@ -32,8 +34,8 @@ const handleTipAmount = () => {
                 <span className="output-title">Tip Amount</span>
                 <span className="output-small-text">/ person</span>
                 </div>
-                <span className="final-amount">{finalTotal.tip}</span>
-                {/* <input type="text" className="final-amount" disabled={true} value={finalTotal.tip}/> */}
+                <span className="final-amount">${tip === 0 ? "0.00" : tip.toFixed(2)}</span>
+
             </div>
             
             <br/>
@@ -43,7 +45,7 @@ const handleTipAmount = () => {
                 <span className="output-title">Total</span>
                 <span className="output-small-text">/ person</span>
                 </div>
-                {/* <input onChange={handleTipAmount}className="final-amount" value={finalTotal.tip} disabled={true}/> */}
+                <span className="final-amount">${tip === 0 ? "0.00" : totalPerson.toFixed(2)}</span>
             </div>
         </>
     )

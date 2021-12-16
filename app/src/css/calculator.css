@@ -90,3 +90,30 @@
 	text-align: right;
 	color: #26c2ae;
 }
+
+@media all and (max-width: 500px) {
+	.calculator-container {
+		display: block;
+	}
+	.input-wrapper {
+		width: 100%;
+	}
+	.output-wrapper {
+		width: 90%;
+		height: ;
+	}
+
+	.tip-btn {
+		width: 146px;
+		padding: 2.5% 7.5%;
+		margin: 2.5% 2.5% 2.5% 0;
+
+		border-style: none;
+		border-radius: 5px;
+
+		background-color: #00474b;
+		color: #fff;
+
+		cursor: pointer;
+	}
+}

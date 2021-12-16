@@ -19,10 +19,6 @@ const Context = ({children}) => {
 
     const [numPeople, setNumPeople] = useState(null);
 
-    const [finalTotal, setFinalTotal] = useState({tip: 0.00, perPerson: 0.00})
-
-
-
 
     return (
         <>
